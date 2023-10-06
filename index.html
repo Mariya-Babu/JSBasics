@@ -6,6 +6,75 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <h1 id="heading">Hello World!</h1>
+
+
+    <!-- Script  -->
+    <script>
+
+        //Hello World!
+        let name = prompt("Enter your name : ");
+        let y = document.getElementById('heading').innerHTML = `Hello ${name} from document.getElementById()`;
+        document.write(`Hello ${name} from document.write()`);
+        console.log(`Hello ${name} from console.`);
+        alert(`Hello ${name}`);
+
+        alert("Enter Values For Mathematical Operation")
+        let num1 = prompt('Enter number 1 : ');
+        let num2 = prompt('Enter number 2 : ');
+
+        let choice = prompt(`+ Addition
+        - Subtraction
+        * Multiplication
+        / Division
+        Enter your choice`);
+
+        switch(choice){
+            case '+':
+                alert(num1 + num2);
+                break;
+            case '-':
+                alert(num1 - num2);
+                break;
+            case '*':
+                alert(num1*num2);
+                break;
+            case '/':
+                alert(num1/num2);
+                break;
+            default:
+                alert('Unknow choice please selecte right one!');
+        }
+
+        let n = prompt('Enter how many even numbers you  to print : ');
+        document.write(`Printing first ${n} Even numbers <br/>`);
+        for(let i=0;i<2*n;i++){
+            if(i%2==0){
+                document.write(i,", ");
+            }
+        }
+
+        document.write('<br/>Half Pyramid<br/>')
+        let x = prompt("Enter n  value to print pyramid ");
+        for(let i=0;i<x;i++){
+            for(let j=0;j<=i;j++){
+                document.write('* ');
+            }
+            document.write('<br/>');
+        }
+
+        document.write('<br/>Full Pyramid</br>')
+
+        for(let i=x;i>=0;i--){
+            for(let j=i;j>=0;j--){
+                document.write(`&nbsp;`);
+            }
+            for(let j=0;j<=(x-i);j++){
+                document.write('* ');
+            }
+            document.write('<br/>');
+        }
+
+    </script>
 </body>
 </html>
